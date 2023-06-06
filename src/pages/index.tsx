@@ -2,16 +2,22 @@ import type { NextPage } from 'next';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
+type Feed = {
+  id: number;
+  comment: string;
+  image_url: string;
+};
+
 const Home: NextPage = () => {
 
-  const [data, setData] = useState(null);
+  const [feeds, setFeeds] = useState<Feed[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://se0c53vznc.execute-api.ap-northeast-2.amazonaws.com/dev/test');
+        const response = await axios.get('https://se0c53vznc.execute-api.ap-northeast-2.amazonaws.com/dev/feeds');
         console.log(response)
-        setData(response.data);
+        setFeeds(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -23,7 +29,14 @@ const Home: NextPage = () => {
   return (
     <>
       <h1>marijuni 입니다.</h1>
-      <div>{ data }</div>
+      { 
+        feeds.map(feed => 
+          <div key={feed.id}>
+            <div>{ feed.comment }</div>
+            <img src={'https://d38e565eilzns0.cloudfront.net/' + feed.image_url + '?w=200'} />
+          </div>
+        )
+      }
     </>
   )
 }
