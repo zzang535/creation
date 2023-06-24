@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Header from '../components/Header';
 
 type Feed = {
   id: number;
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Header />
       <h1>marijuni 입니다.</h1>
       { 
         feeds.map(feed => 
