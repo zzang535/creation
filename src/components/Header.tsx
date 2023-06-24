@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from "next/Link";
+import Link from "next/link";
 import { AppBar, Toolbar, Typography, Button, createTheme, ThemeProvider } from '@material-ui/core'; // 스타일 
 import { makeStyles } from '@material-ui/core/styles'; // 스타일 객체
 
