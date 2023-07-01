@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
+    width: '100vw',
   },
   paper: {
     padding: theme.spacing(4),
