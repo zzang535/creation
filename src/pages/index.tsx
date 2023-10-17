@@ -1,21 +1,15 @@
-import type { NextPage } from 'next';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-
-type Feed = {
-  id: number;
-  comment: string;
-  image_url: string;
-};
+import type { NextPage } from "next";
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import Header from "@/components/Header";
 
 const Home: NextPage = () => {
-
-
   return (
     <>
-      <h1>TEST</h1>
+      <Header />
+      <Link href="/box">3D Box 페이지로 이동</Link>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
