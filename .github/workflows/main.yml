@@ -5,9 +5,9 @@ on:
     branches: [main] # on push main branch
 
 env:
-  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/album.bird89 # github.actor : zzang535, album.bird89 : image name
+  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/creation.bird89 # github.actor : zzang535, album.bird89 : image name
   VERSION: ${{ github.sha }} # github.sha : github variable
-  NAME: album.bird89-container # set name in env
+  NAME: creation.bird89-container # set name in env
 
 jobs:
   build:
