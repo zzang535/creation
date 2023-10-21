@@ -14,7 +14,7 @@ RUN node -v
 RUN echo "NODE VERSION CHECK"
 
 # install
-RUN rm yarn.lock || true
+# RUN rm yarn.lock || true
 RUN yarn
 RUN echo "INSTALL CREATED"
 
