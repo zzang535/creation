@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import { useEffect, useRef } from "react";
-import * as THREE from "three";
 import Header from "@/components/Header";
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const Home: NextPage = () => {
   const canvasRef = useRef<HTMLDivElement | null>(null);
