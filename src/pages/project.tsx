@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
+import { useRouter } from "next/router"; // useRouter 훅 임포트
 import {
   AppBar,
   Toolbar,
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Home: NextPage = () => {
   const classes = useStyles();
+  const router = useRouter();
   return (
     <>
       <Header />
@@ -42,7 +44,12 @@ const Home: NextPage = () => {
           PROJECT
         </Typography>
         <Stack direction="column" spacing={2}>
-          <Button variant="contained">BOX 1</Button>
+          <Button
+            variant="contained"
+            onClick={() => router.push("/project/box")}
+          >
+            BOX 1
+          </Button>
           <Button variant="contained">BOX 2</Button>
           <Button variant="contained">BOX 3</Button>
           <Button variant="contained">BOX 4</Button>

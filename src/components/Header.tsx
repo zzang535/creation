@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router"; // useRouter 훅 임포트
+import { useRouter } from "next/router";
 import {
   AppBar,
   Toolbar,
@@ -15,7 +15,7 @@ import {
   ListItem,
   ListItemText,
 } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu"; // 메뉴 아이콘
+import MenuIcon from "@material-ui/icons/Menu";
 
 const theme = createTheme({
   palette: {
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const router = useRouter(); // useRouter 훅 사용
+  const router = useRouter();
 
   const menuItems = [
     { text: "HOME", href: "/" },
@@ -59,15 +59,18 @@ const Header = () => {
     { text: "CONTACT", href: "/contact" },
   ];
 
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-    setDrawerOpen(open);
-  };
+  const toggleDrawer =
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+
+      setDrawerOpen(open);
+    };
 
   const list = () => (
     <div
