@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
-
 import {
   AppBar,
   Toolbar,
@@ -40,8 +39,14 @@ const Home: NextPage = () => {
       <Header />
       <Container className={classes.container}>
         <Typography variant="h6" className={classes.subtitle}>
-          CREATION.BIRD89
+          PROJECT
         </Typography>
+        <Stack direction="column" spacing={2}>
+          <Button variant="contained">BOX 1</Button>
+          <Button variant="contained">BOX 2</Button>
+          <Button variant="contained">BOX 3</Button>
+          <Button variant="contained">BOX 4</Button>
+        </Stack>
       </Container>
     </>
   );
