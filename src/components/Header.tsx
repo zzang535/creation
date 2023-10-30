@@ -20,7 +20,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#32a89d",
+      main: "#000000",
     },
   },
 });
@@ -54,7 +54,7 @@ const Header = () => {
   const router = useRouter();
 
   const menuItems = [
-    { text: "HOME", href: "/" },
+    { text: "INDEX", href: "/" },
     { text: "PROJECT", href: "/project" },
     { text: "CONTACT", href: "/contact" },
   ];
@@ -106,11 +106,13 @@ const Header = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Link href="/">
-            <Typography variant="subtitle1" className={classes.title}>
-              CREATION.BIRD89
-            </Typography>
-          </Link>
+          <Typography
+            variant="subtitle1"
+            className={classes.title}
+            onClick={() => router.push("/")}
+          >
+            CREATION.BIRD89
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer open={drawerOpen} onClose={toggleDrawer(false)}>

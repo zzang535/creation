@@ -48,11 +48,16 @@ const Home: NextPage = () => {
             variant="contained"
             onClick={() => router.push("/project/box")}
           >
-            BOX 1
+            BOX
           </Button>
-          <Button variant="contained">BOX 2</Button>
-          <Button variant="contained">BOX 3</Button>
-          <Button variant="contained">BOX 4</Button>
+          <Button
+            variant="contained"
+            onClick={() => router.push("/project/three-box")}
+          >
+            THREE BOX
+          </Button>
+          <Button variant="contained">-</Button>
+          <Button variant="contained">-</Button>
         </Stack>
       </Container>
     </>

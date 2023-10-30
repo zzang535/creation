@@ -40,7 +40,7 @@ const Home: NextPage = () => {
       <Header />
       <Container className={classes.container}>
         <Typography variant="h6" className={classes.subtitle}>
-          CREATION.BIRD89
+          INDEX
         </Typography>
       </Container>
     </>

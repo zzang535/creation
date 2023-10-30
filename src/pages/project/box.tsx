@@ -56,9 +56,9 @@ const Home: NextPage = () => {
     // 컴포넌트 unmount시 리소스 정리
     return () => {
       // renderer.dispose();
-      // scene.dispose();
       // geometry.dispose();
       // material.dispose();
+      // if (cube.parent) cube.parent.remove(cube); // cube를 씬에서 제거
       // window.removeEventListener("resize");
     };
   }, []);
